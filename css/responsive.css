@@ -11,7 +11,7 @@
         height: 100vh;
         width: 230px;
         top: 0;
-        right: 0;
+        right: -230px;
         transition: .5s linear;
     }
 
