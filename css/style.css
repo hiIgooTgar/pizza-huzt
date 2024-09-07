@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 7%;
+    align-items: center;
+    background: #e8e2e2e0;
+    border-bottom: 1.4px solid #c40000;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.logo a span {
+    color: #c40000;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 1.3rem;
+}
+
+.navbar ul li a {
+    color: #000;
+    font-weight: 500;
+}
+
+.navbar ul li a:hover {
+    color: #c40000;
+}
+
+.navbar ul li::after {
+    transform: scale(0);
+    padding-bottom: .1rem;
+    border-bottom: 2px solid #c40000;
+    transition: .5s ease;
+    display: block;
+    content: "";
+}
+
+.navbar ul li:hover::after {
+    transform: scale(1);
+}
+
+.navbar i {
+    display: none;
+}
+
+
+body {
+    color: #000;
+    background: #e8e2e2e0;
+}
+
+
+/* home css start */
+.home {
+    min-height: 100vh;
+    background : linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(../img/home.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    color: #fff;
+}
+
+.home .content {
+    max-width: 45rem;
+    line-height: 1.4;
+    padding: 1rem 7%;
+}
+
+.hallo {
+    display: inline-block;
+}
+
+.emoji {
+    animation: emoji 3s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+@keyframes emoji {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(13deg);
+    }
+
+    20% {
+        transform: rotate(-13deg);
+    }
+
+    30% {
+        transform: rotate(13deg);
+    }
+
+    40% {
+        transform: rotate(-13deg);
+    }
+
+    50% {
+        transform: rotate(13deg);
+    }
+
+    60% {
+        transform: rotate(-13deg);
+    }
+
+    70% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.home .content h1 {
+    font-size: 2.3rem;
+}
+
+.home .content h2 {
+    font-size: 2.1rem;
+}
+
+.home .content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+
+.home::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, rgb(232, 226, 226) 2%, rgba(0,0,0,0) 14%);
+    width: 100%;
+    height: 33%;
+    content: "";
+}
+
+.home .content span {
+    color: #c40000;
+    font-weight: 700;
+}
+
+.btn-home {
+    padding: .6rem 1.2rem;
+    color: #fff;
+    background: #c40000;
+    cursor: pointer;
+}
+
+.btn-home:hover {
+    background: #de0000;
+}
+/* home css end */
+
+
+/* about css start */
+.about,
+.menu,
+.sponsor,
+.contact {
+    padding: 6rem 7%;
+}
+
+.about .about-judul{
+    text-align: center;
+}
+
+.about .about-judul span {
+    color: #c40000;
+    font-weight: 700;
+}
+
+.about .about-p {
+    max-width: 40rem;
+    margin: auto;
+    text-align: center;
+    font-weight: 300;
+    padding: 1rem 0 2rem;
+}
+
+.about .row {
+    display: flex;
+    gap: 2rem;
+}
+
+.about .row .about-img {
+    flex: 1 1 35rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .row .about-text {
+    flex: 1 1 28rem;
+}
+
+.about .row .about-text p {
+    font-weight: 300;
+    font-size: .9rem;
+}
+/* about css end */
+
+
+
+/* menu css start */
+.menu h2,
+.sponsor h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.menu h2 span,
+.sponsor h2 span  {
+    color: #c40000;
+}
+
+.menu .row, .menu .row-kedua {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.menu .row .menu-card img {
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-card h4 {
+    background: #fff;
+    padding: .8rem 0;
+    text-align: center;
+}
+
+.menu-card  h5 {
+    text-align: center;
+    margin:  0 0 2rem;
+    padding: .5rem;
+    background: linear-gradient(0deg, #c40000, #f41414);
+    color: #fff;
+}
+/* menu css end */
+
+
+
+/* sponsor css start */
+.sponsor .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor .row .sponsor-img {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 1rem;
+}
+
+.sponsor .row .sponsor-img img {
+    width: 75%;
+}
+/* sponsor css end */
+
+
+
+/* contact css start */
+.contact p {
+    max-width: 40rem;
+    margin: auto;
+    text-align: center;
+    font-weight: 300;
+    padding: 0 0 2rem;
+}
+
+.contact .row {
+    display: flex;
+    margin: 1.5rem 0 1rem;
+    gap: 1.5rem;
+}
+
+.contact .row .maps {
+    flex: 1 1 45rem;
+}
+
+.contact .row .maps iframe {
+    width: 100%;
+    height: 440px;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+}
+
+.contact .row form .group-contact {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.group-contact input {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #c40000;
+    padding: .7rem;
+}
+
+.group-contact textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #c40000;
+    resize: none;
+    height: 120px;
+    padding: .7rem;
+}
+
+.group-contact span {
+    position: absolute;
+    left: .5rem;
+    padding: .7rem;
+    pointer-events: none;
+    font-size: .8rem;
+    transition: .8s ease-in-out;
+}
+
+.group-contact input:valid ~ span,
+.group-contact input:focus ~ span {
+    transform: translateX(2px) translateY(-10px);
+    padding: .8px 8px;
+    font-weight: 600;
+    background: #de0000;
+    color:#fff;
+}
+
+.group-contact textarea:valid ~ span,
+.group-contact textarea:focus ~ span {
+    transform: translateX(2px) translateY(-10px);
+    padding: .8px 8px;
+    color:#fff;
+    font-weight: 600;
+    background: #de0000;
+}
+
+.kirim-btn {
+    padding: .4rem 1rem;
+    color: #fff;
+    background: #de0000;
+    cursor: pointer;
+}
+
+.kirim-btn:hover {
+    background: #c40000;
+}
+/* contact css end */
+
+
+
+
+/* footer css */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem 7%;
+    align-items: center;
+    background: #c40000;
+}
+
+footer .social a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+footer .social a span {
+    color: #de0000;
+    padding: .2rem .6rem;
+    background: #fff;
+}
+
+footer .copyright p {
+    font-size: .8rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+footer .copyright p span {
+    color: #de0000;
+    padding: .2rem .3rem;
+    background: #fff;
+}
